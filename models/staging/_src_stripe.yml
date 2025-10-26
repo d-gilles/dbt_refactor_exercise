@@ -1,0 +1,14 @@
+sources:
+  - name: stripe
+    database: raw
+    schema: stripe
+    description: Raw data from payment provider stripe
+    tables: 
+      - name: payment
+        description: raw payments - one payment per row
+        columns:
+          - name: id
+            description: primary key 
+            tests:
+              - unique
+              - not_null
